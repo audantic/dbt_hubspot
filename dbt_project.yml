@@ -42,6 +42,9 @@ vars:
     engagement_note: "{{ ref('stg_hubspot__engagement_note') }}"
     engagement_task: "{{ ref('stg_hubspot__engagement_task') }}"
     hubspot_contact_merge_audit_enabled: false
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
 models:
   hubspot:
     +materialized: table
