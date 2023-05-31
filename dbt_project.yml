@@ -24,11 +24,14 @@ vars:
     email_event_deferred: "{{ ref('stg_hubspot__email_event_deferred') }}"
     email_event_delivered: "{{ ref('stg_hubspot__email_event_delivered') }}"
     email_event_dropped: "{{ ref('stg_hubspot__email_event_dropped') }}"
-    email_event_forward: false
+    email_event_forward: "{{ ref('stg_hubspot__email_event_forward') }}"
+    hubspot_email_event_forward_enabled: false
     email_event_open: "{{ ref('stg_hubspot__email_event_open') }}"
-    email_event_print: false
+    email_event_print: "{{ ref('stg_hubspot__email_event_print') }}"
+    hubspot_email_event_print_enabled: false
     email_event_sent: "{{ ref('stg_hubspot__email_event_sent') }}"
-    email_event_spam_report: false
+    email_event_spam_report: "{{ ref('stg_hubspot__email_event_spam_report') }}"
+    hubspot_email_event_spam_report_enabled: false
     email_event_status_change: "{{ ref('stg_hubspot__email_event_status_change') }}"
     email_event: "{{ ref('stg_hubspot__email_event') }}"
     engagement: "{{ ref('stg_hubspot__engagement') }}"
