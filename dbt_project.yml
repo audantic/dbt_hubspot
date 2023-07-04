@@ -24,13 +24,13 @@ vars:
     email_event_deferred: "{{ ref('stg_hubspot__email_event_deferred') }}"
     email_event_delivered: "{{ ref('stg_hubspot__email_event_delivered') }}"
     email_event_dropped: "{{ ref('stg_hubspot__email_event_dropped') }}"
-    # hubspot_email_event_forward_enabled: false
+    hubspot_email_event_forward_enabled: false
     email_event_open: "{{ ref('stg_hubspot__email_event_open') }}"
     email_event_print: "{{ ref('stg_hubspot__email_event_print') }}"
-    #hubspot_email_event_print_enabled: false
+    hubspot_email_event_print_enabled: false
     email_event_sent: "{{ ref('stg_hubspot__email_event_sent') }}"
     email_event_spam_report: "{{ ref('stg_hubspot__email_event_spam_report') }}"
-    #hubspot_email_event_spam_report_enabled: false
+    hubspot_email_event_spam_report_enabled: false
     email_event_status_change: "{{ ref('stg_hubspot__email_event_status_change') }}"
     email_event: "{{ ref('stg_hubspot__email_event') }}"
     engagement: "{{ ref('stg_hubspot__engagement') }}"
@@ -44,7 +44,7 @@ vars:
     engagement_meeting: "{{ ref('stg_hubspot__engagement_meeting') }}"
     engagement_note: "{{ ref('stg_hubspot__engagement_note') }}"
     engagement_task: "{{ ref('stg_hubspot__engagement_task') }}"
-    #hubspot_contact_merge_audit_enabled: false
+    hubspot_contact_merge_audit_enabled: false
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
