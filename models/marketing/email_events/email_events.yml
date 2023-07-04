@@ -330,51 +330,51 @@ models:
       - name: contact_id
         description: The ID of the related contact.
 
-  - name: hubspot__email_event_print
-    description: Each record represents a PRINT email event.
-    columns:
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+  # - name: hubspot__email_event_print
+  #   description: Each record represents a PRINT email event.
+  #   columns:
+  #     - name: _fivetran_synced
+  #       description: '{{ doc("_fivetran_synced") }}'
 
-      - name: is_contact_deleted
-        description: '{{ doc("is_deleted") }}'
+  #     - name: is_contact_deleted
+  #       description: '{{ doc("is_deleted") }}'
 
-      - name: browser
-        description: '{{ doc("email_event_browser") }}'
+  #     - name: browser
+  #       description: '{{ doc("email_event_browser") }}'
 
-      - name: event_id
-        description: The ID of the event.
-        tests:
-          - dbt_expectations.expect_column_values_to_be_unique:
-              row_condition: "not coalesce(is_contact_deleted, false)"
-          - not_null
+  #     - name: event_id
+  #       description: The ID of the event.
+  #       tests:
+  #         - dbt_expectations.expect_column_values_to_be_unique:
+  #             row_condition: "not coalesce(is_contact_deleted, false)"
+  #         - not_null
 
-      - name: geo_location
-        description: '{{ doc("email_event_location") }}'
+  #     - name: geo_location
+  #       description: '{{ doc("email_event_location") }}'
 
-      - name: ip_address
-        description: '{{ doc("email_event_ip_address") }}'
+  #     - name: ip_address
+  #       description: '{{ doc("email_event_ip_address") }}'
 
-      - name: user_agent
-        description: '{{ doc("email_event_user_agent") }}'
+  #     - name: user_agent
+  #       description: '{{ doc("email_event_user_agent") }}'
         
-      - name: created_timestamp
-        description: The created timestamp of the event.
+  #     - name: created_timestamp
+  #       description: The created timestamp of the event.
 
-      - name: email_campaign_id
-        description: The ID of the related email campaign.
+  #     - name: email_campaign_id
+  #       description: The ID of the related email campaign.
 
-      - name: recipient_email_address
-        description: The email address of the contact related to the event.
+  #     - name: recipient_email_address
+  #       description: The email address of the contact related to the event.
 
-      - name: email_send_timestamp
-        description: The timestamp of the SENT event related to this event.
+  #     - name: email_send_timestamp
+  #       description: The timestamp of the SENT event related to this event.
 
-      - name: email_send_id
-        description: The event ID which uniquely identifies the email message's SENT event. If not applicable, this property is omitted.
+  #     - name: email_send_id
+  #       description: The event ID which uniquely identifies the email message's SENT event. If not applicable, this property is omitted.
 
-      - name: contact_id
-        description: The ID of the related contact.
+  #     - name: contact_id
+  #       description: The ID of the related contact.
 
   - name: hubspot__email_event_sent
     description: Each record represents a SENT email event.
@@ -425,45 +425,45 @@ models:
       - name: contact_id
         description: The ID of the related contact.
 
-  - name: hubspot__email_event_spam_report
-    description: Each record represents a SPAM_REPORT email event.
-    columns:
-      - name: _fivetran_synced
-        description: '{{ doc("_fivetran_synced") }}'
+  # - name: hubspot__email_event_spam_report
+  #   description: Each record represents a SPAM_REPORT email event.
+  #   columns:
+  #     - name: _fivetran_synced
+  #       description: '{{ doc("_fivetran_synced") }}'
 
-      - name: is_contact_deleted
-        description: '{{ doc("is_deleted") }}'
+  #     - name: is_contact_deleted
+  #       description: '{{ doc("is_deleted") }}'
 
-      - name: event_id
-        description: The ID of the event.
-        tests:
-          - dbt_expectations.expect_column_values_to_be_unique:
-              row_condition: "not coalesce(is_contact_deleted, false)"
-          - not_null
+  #     - name: event_id
+  #       description: The ID of the event.
+  #       tests:
+  #         - dbt_expectations.expect_column_values_to_be_unique:
+  #             row_condition: "not coalesce(is_contact_deleted, false)"
+  #         - not_null
 
-      - name: ip_address
-        description: '{{ doc("email_event_ip_address") }}'
+  #     - name: ip_address
+  #       description: '{{ doc("email_event_ip_address") }}'
 
-      - name: user_agent
-        description: '{{ doc("email_event_user_agent") }}'
+  #     - name: user_agent
+  #       description: '{{ doc("email_event_user_agent") }}'
         
-      - name: created_timestamp
-        description: The created timestamp of the event.
+  #     - name: created_timestamp
+  #       description: The created timestamp of the event.
 
-      - name: email_campaign_id
-        description: The ID of the related email campaign.
+  #     - name: email_campaign_id
+  #       description: The ID of the related email campaign.
 
-      - name: recipient_email_address
-        description: The email address of the contact related to the event.
+  #     - name: recipient_email_address
+  #       description: The email address of the contact related to the event.
 
-      - name: email_send_timestamp
-        description: The timestamp of the SENT event related to this event.
+  #     - name: email_send_timestamp
+  #       description: The timestamp of the SENT event related to this event.
 
-      - name: email_send_id
-        description: The event ID which uniquely identifies the email message's SENT event. If not applicable, this property is omitted.
+  #     - name: email_send_id
+  #       description: The event ID which uniquely identifies the email message's SENT event. If not applicable, this property is omitted.
 
-      - name: contact_id
-        description: The ID of the related contact.
+  #     - name: contact_id
+  #       description: The ID of the related contact.
 
   - name: hubspot__email_event_status_change
     description: Each record represents a STATUS_CHANGE email event in Hubspot.
