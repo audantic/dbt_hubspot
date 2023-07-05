@@ -9,9 +9,7 @@ vars:
                   'deferrals',    #Remove if you do not want metrics in final model.
                   'deliveries',   #Remove if you do not want metrics in final model.
                   'drops',        #Remove if you do not want metrics in final model.
-                  #'forwards',     #Remove if you do not want metrics in final model.
                   'opens',        #Remove if you do not want metrics in final model.
-                  #'prints',       #Remove if you do not want metrics in final model.
                   'spam_reports', #Remove if you do not want metrics in final model.
                   'unsubscribes'  #Remove if you do not want metrics in final model.
                   ]
@@ -36,10 +34,10 @@ vars:
     email_event_delivered: "{{ ref('stg_hubspot__email_event_delivered') }}"
     email_event_dropped: "{{ ref('stg_hubspot__email_event_dropped') }}"
     hubspot_email_event_forward_enabled: false
-    #email_event_forward: "{{ ref('stg_hubspot__email_event_forward') }}"
+    # email_event_forward: "{{ ref('stg_hubspot__email_event_forward') }}"
     email_event_open: "{{ ref('stg_hubspot__email_event_open') }}"
-    email_event_print: "{{ ref('stg_hubspot__email_event_print') }}"
     hubspot_email_event_print_enabled: false
+    # email_event_print: "{{ ref('stg_hubspot__email_event_print') }}"
     email_event_sent: "{{ ref('stg_hubspot__email_event_sent') }}"
     email_event_spam_report: "{{ ref('stg_hubspot__email_event_spam_report') }}"
     hubspot_email_event_spam_report_enabled: false
