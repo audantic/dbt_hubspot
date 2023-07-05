@@ -64,6 +64,11 @@ models:
   hubspot:
     +materialized: table
     +schema: hubspot
+    tmp:
+     stg_hubspot__email_event_forward_tmp:
+       +enabled: false
+     stg_hubspot__email_event_print_tmp:
+       +enabled: false
     marketing:
       intermediate:
         +materialized: ephemeral
