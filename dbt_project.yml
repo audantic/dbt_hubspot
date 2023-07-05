@@ -4,6 +4,17 @@ version: '0.9.1'
 config-version: 2
 require-dbt-version: [">=1.3.0", "<2.0.0"]
 vars:
+  email_metrics: ['bounces',      #Remove if you do not want metrics in final model.
+                  'clicks',       #Remove if you do not want metrics in final model.
+                  'deferrals',    #Remove if you do not want metrics in final model.
+                  'deliveries',   #Remove if you do not want metrics in final model.
+                  'drops',        #Remove if you do not want metrics in final model.
+                  #'forwards',     #Remove if you do not want metrics in final model.
+                  'opens',        #Remove if you do not want metrics in final model.
+                  #'prints',       #Remove if you do not want metrics in final model.
+                  'spam_reports', #Remove if you do not want metrics in final model.
+                  'unsubscribes'  #Remove if you do not want metrics in final model.
+                  ]
   hubspot:
     contact: "{{ ref('stg_hubspot__contact') }}"
     contact_merge_audit: "{{ ref('stg_hubspot__contact_merge_audit') }}"
