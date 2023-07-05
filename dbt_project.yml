@@ -69,6 +69,10 @@ models:
        +enabled: false
      stg_hubspot__email_event_print_tmp:
        +enabled: false
+    stg_hubspot__email_event_forward:
+      +enabled: false
+    stg_hubspot__email_event_print:
+      +enabled: false
     marketing:
       intermediate:
         +materialized: ephemeral
