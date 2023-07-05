@@ -41,9 +41,6 @@ with base as (
 )
 
 select *
-from contacts_joined;
-
-DROP hubspot_stg_hubspot.stg_hubspot__email_event_print_tmp IF EXISTS
-DROP hubspot.email_event_forward IF EXISTS
+from contacts_joined
     
 {% endmacro %}
