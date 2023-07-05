@@ -25,7 +25,7 @@ vars:
     email_event_delivered: "{{ ref('stg_hubspot__email_event_delivered') }}"
     email_event_dropped: "{{ ref('stg_hubspot__email_event_dropped') }}"
     hubspot_email_event_forward_enabled: false
-    email_event_forward: "{{ ref('stg_hubspot__email_event_forward') }}"
+    #email_event_forward: "{{ ref('stg_hubspot__email_event_forward') }}"
     email_event_open: "{{ ref('stg_hubspot__email_event_open') }}"
     email_event_print: "{{ ref('stg_hubspot__email_event_print') }}"
     hubspot_email_event_print_enabled: false
